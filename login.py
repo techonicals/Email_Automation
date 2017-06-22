@@ -6,7 +6,7 @@ driver.get("http://ymail.com")
 assert "Yahoo" in driver.title
 elem = driver.find_element_by_name("username")
 elem.clear()
-elem.send_keys("shivangrk@yahoo.com")
+elem.send_keys("abc@yahoo.com")
 elem.send_keys(Keys.RETURN)
 
 assert "No results found." not in driver.page_source
