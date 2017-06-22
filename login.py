@@ -10,8 +10,17 @@ class testing(unittest.TestCase):
     def test_data(self, data_set):
         print data_set['start']
 
-        # start = data_set['start']
-        # print start
+    @file_data("data.json")
+    def test_dict(self, data_set):
+        try:
+            self.assertLess(data_set['start'],data_set['end'])
+        except AssertionError as e:
+            print("Exception= '{0}'".format(e.message))
+            #e.args += ('some other', 'important', 'information', 42)
+            raise
+
+        # self.assertLess(data_set['value'], data_set['end'])
+        # self.assertGreater(data_set['value'], data_set['end'])
 
 
 

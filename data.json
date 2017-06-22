@@ -2,14 +2,7 @@
   "test":{
     "use": "data@data.com",
     "password": "data123",
-    "start": "4",
-    "end": "5",
-    "value": "8"
-  },
-  "test2":{
-    "use": "data@data.com",
-    "password": "data123",
-    "start": "4",
+    "start": "6",
     "end": "5",
     "value": "8"
   }
