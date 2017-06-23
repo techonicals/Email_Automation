@@ -4,13 +4,17 @@ from ddt import ddt, data,file_data,unpack
 import unittest
 from selenium.common.exceptions import NoSuchElementException
 import math
+import os
 
 @ddt
 class testing(unittest.TestCase):
-    def setUp(self):
-        self.driver = webdriver.Firefox()
 
-    @file_data('login.json')
+    # dir = os.getcwd()
+    # print dir
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+
+    @file_data("data/login.json")
     def test_login(self,data_set):
             driver = self.driver
             driver.get("http://ymail.com")
