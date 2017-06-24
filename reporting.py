@@ -7,3 +7,6 @@ print report_location
 f = open(os.path.join('Reports', 'file.txt'), 'w')
 f.write('This is the new file.')
 f.close()
+
+dir = os.getcwd()
+print dir

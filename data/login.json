@@ -1,14 +1,15 @@
 {
   "Test1":{
-    "value":"abc@yahoo.com"
+    "mail_app":"http://gmail.com",
+    "value":"abc@gmail.com"
   },
   "Test2":{
+    "mail_app":"http://ymail.com",
     "value":"rajesh@yahoo.com"
     },
   "Test3":{
-    "value":"yahoo123@yahoo.com"
-    },
-  "Test4":{
-    "value":"admin@yahoo.com"
+    "mail_app":"http://outlook.com",
+    "value":"yahoo123@outlook.com"
     }
+
 }
