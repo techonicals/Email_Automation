@@ -27,13 +27,11 @@ class testing(unittest.TestCase):
                 elem = driver.find_element_by_id("login-username")
             elem.send_keys(data_set['value'])
             elem.send_keys(Keys.RETURN)
-
-
-            elem.send_keys(Keys.RETURN)
-            elem2 = driver.find_element_by_id("login-signin")
-            elem2.click()
-            if driver.find_element_by_id("username-error"):
-                print "Username doesnt Exist"
+            #elem2 = driver.find_element_by_id("login-signin")
+            #elem2.click()
+            elem4 = driver.find_element_by_id("username-error")
+            if elem4.is_enabled():
+                print "Username doesnot Exist"
             else :
                 print "Username Exists"
 
