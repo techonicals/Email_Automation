@@ -1,12 +1,9 @@
+import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from ddt import ddt, data,file_data,unpack
-from selenium.webdriver.common.by import By
-import unittest
+from ddt import ddt,file_data,unpack
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException
-import math
-import os
 
 @ddt
 class testing(unittest.TestCase):
@@ -45,12 +42,14 @@ class testing(unittest.TestCase):
             logo = driver.find_element_by_id("uh-logo")
             if logo.is_displayed():
                 print "logged out"
-            # unError = driver.find_element_by_id("username-error")
-            #
-            # if unError.is_enabled():
-            #     print "Username doesnot Exist"
-            # else :
-            #     print "Username Exists"
+
+    def userNotexists(self):
+            driver = self.driver
+            unError = driver.find_element_by_id("username-error")
+            if unError.is_enabled():
+                print "Username doesnot Exist"
+            else :
+                print "Username Exists"
 
     def tearDown(self):
         self.driver.close()
