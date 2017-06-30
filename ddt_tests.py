@@ -4,18 +4,21 @@ import os
 # @file_data('data.json')
 # def test_data(self, data_set):
 #     print data_set['start']
-orig = "data/data.json"
-dup = "data/data2.json"
+
 
 
 @ddt
 class testing(unittest.TestCase):
+    orig = "data/data12.json"
+    dup = "data/data2.json"
     if os.path.isfile(orig):
         varl = orig
+
+
     else:
         varl = dup
 
-    @file_data('varl')
+    @file_data(varl)
     def test_dict(self, data_set):
         try:
             self.assertLess(data_set['start'],data_set['end'])
