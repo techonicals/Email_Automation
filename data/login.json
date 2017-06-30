@@ -1,15 +1,8 @@
 {
-  "Test1":{
-    "mail_app":"http://gmail.com",
-    "value":"abc@gmail.com"
-  },
+
   "Test2":{
     "mail_app":"http://ymail.com",
-    "value":"rajesh@yahoo.com"
-    },
-  "Test3":{
-    "mail_app":"http://outlook.com",
-    "value":"yahoo123@outlook.com"
+    "value":"rajesh@ymail.com"
     }
 
 }
