@@ -1,16 +1,28 @@
-# import ddt
+import unittest
+from ddt import ddt,file_data,unpack
+import os
 # @file_data('data.json')
 # def test_data(self, data_set):
 #     print data_set['start']
+orig = "data/data.json"
+dup = "data/data2.json"
 
-# @file_data("data.json")
-# def test_dict(self, data_set):
-#     try:
-#         self.assertLess(data_set['start'],data_set['end'])
-#
-#     except AssertionError as e:
-#         print("Exception= '{0}'".format(e.message))
-#         raise
+
+@ddt
+class testing(unittest.TestCase):
+    if os.path.isfile(orig):
+        varl = orig
+    else:
+        varl = dup
+
+    @file_data('varl')
+    def test_dict(self, data_set):
+        try:
+            self.assertLess(data_set['start'],data_set['end'])
+            print "in try"
+        except AssertionError as e:
+            print("Exception= '{0}'".format(e.message))
+            raise
 
 # self.assertLess(data_set['value'], data_set['end'])
 # self.assertGreater(data_set['value'], data_set['end'])
