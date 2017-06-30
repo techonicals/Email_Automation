@@ -2,7 +2,8 @@
 
   "Test2":{
     "mail_app":"http://ymail.com",
-    "value":"rajesh@ymail.com"
-    }
+    "value":"nothing@yahoo.com",
+    "pass" : "nothing"
+  }
 
 }
